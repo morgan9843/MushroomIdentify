@@ -3,19 +3,35 @@ import {
 } from 'react-native'
 
 const styles = StyleSheet.create({
-  container: {
+  containerTop: {
     flex: 1,
     backgroundColor: '#FEFACB',
     alignItems: 'center',
     justifyContent: 'center'
   },
 
-  button: {
-    marginTop: 10,
-    alignSelf: 'center',
+  continerMid: {
+    flex: 10,
+    backgroundColor: '#FEFACB',
     alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  containerBot: {
+    flex: 1,
+    backgroundColor: '#FEFACB',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  buttonNew: {
     backgroundColor: '#CC1516',
     borderRadius: 10
+  },
+
+  buttonDetails: {
+    backgroundColor: '#CC1516',
+    borderRadius: 10,
   },
 
   buttonText: {

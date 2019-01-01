@@ -3,6 +3,9 @@ import { Alert, Text, View, TouchableHighlight } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import styles from './styles/styles';
 
+//
+// Start screen
+//
 class HomeScreen extends React.Component{
   static navigationOptions = {
     title: 'Welcome!',
@@ -14,33 +17,38 @@ class HomeScreen extends React.Component{
 
   render() {
     return (
-      <View style={styles.container}>
-          <TouchableHighlight 
-            onPress={this._onPressButton} 
-            underlayColor="white">
-            <View style={styles.button}>
-              <Text 
-               style={styles.buttonText}>
-               New
-              </Text>
-            </View>
-        </TouchableHighlight>
+      <View style={{flex: 1, backgroundColor: '#FEFACB'}}>
 
-        <TouchableHighlight 
-            onPress={() => this.props.navigation.navigate('Details')}
-            underlayColor="white">
-            <View style={styles.button}>
-              <Text 
-               style={styles.buttonText}>
-               Details
+        <View style={styles.containerTop}>       
+          <TouchableHighlight onPress={this._onPressButton} underlayColor="white">
+            <View style={styles.buttonNew}>
+              <Text style={styles.buttonText}> 
+                New
               </Text>
             </View>
-        </TouchableHighlight>
+          </TouchableHighlight>        
+        </View>
+
+      <View style={styles.continerMid}></View>
+
+        <View style={styles.containerBot}>
+          <TouchableHighlight onPress={() => this.props.navigation.navigate('Details')} underlayColor="white">
+            <View style={styles.buttonDetails}>
+              <Text style={styles.buttonText}>
+                Details
+              </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
+
       </View>
     );
   }
 }
 
+//
+// Details pertaining to the project
+//
 class DetailsScreen extends React.Component {
   static navigationOptions = {
     title: 'Project Details / About',
